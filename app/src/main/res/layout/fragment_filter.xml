@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.filter.FilterFragment">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/sportButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:src="@drawable/reccenter"
+        android:tag="0"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/placesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:clickable="true"
+        android:src="@drawable/mountain"
+        android:tag="0"
+        app:layout_constraintEnd_toEndOf="@+id/shopButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/shopButton"
+        app:layout_constraintTop_toBottomOf="@+id/shopButton" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/shopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:clickable="true"
+        android:src="@drawable/food_gourmet"
+        android:tag="0"
+        app:layout_constraintBottom_toBottomOf="@+id/sportButton"
+        app:layout_constraintStart_toEndOf="@+id/textView21"
+        app:layout_constraintTop_toTopOf="@+id/sportButton"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/govermentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:clickable="true"
+        android:src="@drawable/government_capitolbuilding"
+        android:tag="0"
+        app:layout_constraintEnd_toEndOf="@+id/foodButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/foodButton"
+        app:layout_constraintTop_toBottomOf="@+id/foodButton" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/museumsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:clickable="true"
+        android:src="@drawable/museum"
+        android:tag="0"
+        app:layout_constraintEnd_toEndOf="@+id/medicalButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/medicalButton"
+        app:layout_constraintTop_toBottomOf="@+id/medicalButton" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/beautyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:clickable="true"
+        android:src="@drawable/union"
+        android:tag="0"
+        app:layout_constraintEnd_toEndOf="@+id/museumsButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/museumsButton"
+        app:layout_constraintTop_toBottomOf="@+id/museumsButton" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/foodButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:clickable="true"
+        android:src="@drawable/food_foodcourt"
+        android:tag="0"
+        app:layout_constraintEnd_toEndOf="@+id/placesButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/placesButton"
+        app:layout_constraintTop_toBottomOf="@+id/placesButton" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/medicalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:clickable="true"
+        android:src="@drawable/medical_ems"
+        android:tag="0"
+        app:layout_constraintEnd_toEndOf="@+id/sportButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/sportButton"
+        app:layout_constraintTop_toBottomOf="@+id/sportButton" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sport"
+        app:layout_constraintBottom_toBottomOf="@+id/sportButton"
+        app:layout_constraintStart_toEndOf="@+id/sportButton"
+        app:layout_constraintTop_toTopOf="@+id/sportButton" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shop"
+        app:layout_constraintBottom_toBottomOf="@+id/shopButton"
+        app:layout_constraintStart_toEndOf="@+id/shopButton"
+        app:layout_constraintTop_toTopOf="@+id/shopButton"
+        app:layout_constraintVertical_bias="0.486" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Places"
+        app:layout_constraintBottom_toBottomOf="@+id/placesButton"
+        app:layout_constraintStart_toEndOf="@+id/placesButton"
+        app:layout_constraintTop_toTopOf="@+id/placesButton" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food"
+        app:layout_constraintBottom_toBottomOf="@+id/foodButton"
+        app:layout_constraintStart_toEndOf="@+id/foodButton"
+        app:layout_constraintTop_toTopOf="@+id/foodButton" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Goverment"
+        app:layout_constraintBottom_toBottomOf="@+id/govermentButton"
+        app:layout_constraintStart_toEndOf="@+id/govermentButton"
+        app:layout_constraintTop_toTopOf="@+id/govermentButton" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medical"
+        app:layout_constraintBottom_toBottomOf="@+id/medicalButton"
+        app:layout_constraintStart_toEndOf="@+id/medicalButton"
+        app:layout_constraintTop_toTopOf="@+id/medicalButton" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Museums"
+        app:layout_constraintBottom_toBottomOf="@+id/museumsButton"
+        app:layout_constraintStart_toEndOf="@+id/museumsButton"
+        app:layout_constraintTop_toTopOf="@+id/museumsButton" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beauty"
+        app:layout_constraintBottom_toBottomOf="@+id/beautyButton"
+        app:layout_constraintStart_toEndOf="@+id/beautyButton"
+        app:layout_constraintTop_toTopOf="@+id/beautyButton" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/creperie"
+        app:layout_constraintEnd_toEndOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
