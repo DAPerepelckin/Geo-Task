@@ -17,6 +17,7 @@ public class FilterViewModel extends ViewModel {
        filterProps = new MutableLiveData<>();
        filterProps.setValue(new HashMap<>());
 
+
     }
     public void addProps(Integer key, String val){
         filterProps.getValue().put(key, val);

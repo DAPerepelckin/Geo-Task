@@ -5,25 +5,24 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.dapstd.geotask.ui.location.LocationFragment;
 import com.dapstd.geotask.R;
 import com.dapstd.geotask.databinding.FragmentFilterBinding;
+import com.google.android.gms.maps.model.LatLng;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-import java.util.Map;
 
 public class FilterFragment extends Fragment {
 
     private FilterViewModel filterViewModel;
     private FragmentFilterBinding binding;
+    private LatLng location;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -32,6 +31,20 @@ public class FilterFragment extends Fragment {
 
         binding = FragmentFilterBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
+
+        ImageView locationBtn = binding.locationBtn;
+        TextView currentLocationView = binding.currentLocation;
+        locationBtn.setOnClickListener(v->{
+            getFragmentManager().setFragmentResultListener("locationKey", getViewLifecycleOwner(), (requestKey, result) -> {
+               currentLocationView.setText(result.getString("latlng"));
+            });
+            getFragmentManager().beginTransaction()
+                    .add(container.getId(), LocationFragment.class,null)
+                    .addToBackStack("location")
+                    .setReorderingAllowed(true)
+                    .commit();
+        });
 
 
         FloatingActionButton sportBtn = binding.sportButton;
@@ -53,11 +66,8 @@ public class FilterFragment extends Fragment {
         shopBtn.setOnClickListener(this::onClick);
 
 
-        filterViewModel.getFilterProps().observe(getViewLifecycleOwner(), new Observer<Map<Integer, String>>() {
-            @Override
-            public void onChanged(Map<Integer, String> stringIntegerMap) {
+        filterViewModel.getFilterProps().observe(getViewLifecycleOwner(), stringIntegerMap -> {
 
-            }
         });
 
 

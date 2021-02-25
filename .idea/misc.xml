@@ -5,8 +5,10 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.296195652173913" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.2" />
-        <entry key="app/src/main/res/layout/fragment_filter.xml" value="0.8258064516129032" />
+        <entry key="app/src/main/res/layout/fragment_filter.xml" value="0.35833333333333334" />
         <entry key="app/src/main/res/layout/fragment_history.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/fragment_location.xml" value="0.35833333333333334" />
+        <entry key="app/src/main/res/layout/fragment_location2.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.33" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.2" />
